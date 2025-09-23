@@ -1,0 +1,15 @@
+Reflection Questions  
+
+a. What resources or websites did you use while working on this project? 
+
+  favicon.io
+    - generate favicon content
+  coolors.co
+    - general colour scheme ideas
+
+b. What is your favorite aspect or feature of your website? 
+
+c. What is something you learned from this course you want to improve on as you 
+continue? 
+    - responsive design, specifically as it pertains to mobile development concepts
+ 

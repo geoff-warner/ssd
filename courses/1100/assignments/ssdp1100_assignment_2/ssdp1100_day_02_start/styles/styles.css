@@ -1,0 +1,23 @@
+/*=== Credits Page ===*/
+
+/* Table Styles */
+table {
+    border-collapse: collapse;
+    background-color: #ffffe0;
+}
+
+table, tr, td {
+    border: 1px solid #808080;
+}
+
+td {
+    padding: .5rem;  
+}
+
+
+
+/*=== Blog Page ===*/
+/* Code along Intro to CSS */
+
+
+

@@ -1,0 +1,96 @@
+* {
+  box-sizing: border-box;
+  margin: auto;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  background-color: peachpuff;
+  color: chocolate;
+  direction: ltr;
+  align-items: center;
+}
+body,
+html {
+  background-color: brown;
+}
+a {
+  border: 3px;
+  border-color: black;
+  text-decoration: none;
+  background-color: peachpuff;
+  text-align: center;
+}
+
+img {
+  display: block;
+  border-radius: 25px;
+  border: 0.5em;
+  border-style: solid;
+  border-color: chocolate;
+  margin: 0 auto;
+  align-items: center;
+}
+
+h1 {
+  background-color: peachpuff;
+  margin: auto;
+  text-align: center;
+}
+h2 {
+  background-color: peachpuff;
+}
+h3 {
+  background-color: peachpuff;
+}
+h4 {
+  background-color: peachpuff;
+  margin-bottom: -1em;
+}
+.mainpage {
+  background-color: brown;
+  color: peachpuff;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  width: 600px;
+  background-color: brown;
+}
+
+.item {
+  background-color: peachpuff;
+  display: block;
+  border: 3px;
+  border-color: chocolate;
+  border-style: solid;
+  padding: 10px;
+  border-radius: 1em;
+  width: 600px;
+  height: auto;
+  text-align: center;
+  margin: 1em auto;
+}
+
+.recipe {
+  display: block;
+  text-align: start;
+  justify-content: start;
+  width: 600px;
+  padding: 0.5em;
+  font-size: 16px;
+}
+
+em,
+strong {
+  background-color: peachpuff;
+}
+ul {
+  background-color: peachpuff;
+  margin-bottom: -0.5em; 
+}
+header,
+footer {
+  text-align: center;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  background-color: peachpuff;
+}

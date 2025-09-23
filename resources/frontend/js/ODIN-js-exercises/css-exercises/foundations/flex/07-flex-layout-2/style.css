@@ -1,0 +1,91 @@
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 1; /*this */
+}
+a {
+  text-decoration: none;
+  color: white;
+  font-size: 24px;
+}
+
+ul {
+  /* display: flex;
+  flex-direction: column; */
+  list-style: none;
+  /* gap: 16px; */
+  /**/
+  margin: 0;
+  padding: 0;
+  /**/
+}
+/**/
+li {
+  margin-bottom: 16px;
+}
+/**/
+.header {
+  display: flex;
+  align-items: center;
+  height: 72px;
+  background: darkmagenta;
+  color: white;
+  padding: 0 16px;/*0 added*/
+  box-sizing: border-box;
+  font-weight: 900;
+  font-size: 32px;
+}
+
+.footer {
+  display: flex;
+  height: 72px;
+  background: #eee;
+  color: darkmagenta;
+  /* text-align: center; */
+  align-items: center;
+  justify-content: center;
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 300px;
+  background: royalblue;
+  box-sizing: border-box;
+  min-width: 300px; /*flex-shrink: 0;*/
+  padding: 16px;
+  margin: 0;
+}
+
+.card {
+  display: flex;
+  flex-direction: row;
+  border: 1px solid #eee;
+  box-shadow: 2px 4px 16px rgba(0,0,0,.06);
+  border-radius: 4px;
+  width: 300px;
+  /**/
+  padding: 16px;
+  /*model doesn't include height, but leaving out causes cards to be trimmed to suit text*/
+  height: 300px;
+}
+#cardbox {
+  flex-wrap: wrap;
+  margin-top: 48px;
+  margin-left: 48px;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 16px;
+}
+.container {
+  display: flex;
+  flex-direction: row;
+  flex-grow: 1;
+  gap: 16px;
+}

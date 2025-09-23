@@ -1,0 +1,33 @@
+ssd/
+	courses/
+		1100/
+			assignments/
+			code-along/
+			final-project/	*existing repo*
+			slides/
+			zips/
+		1505/			
+			assignments/
+			slides/
+			zips/
+		2000/
+			assignments/
+			slides/
+			zips/
+		2505/
+			assignments/
+			slides/
+			zips/
+	resources/
+		backend/
+			c#/
+			database/
+		frontend/
+			css/
+				BEM template.css
+				normalize.css
+			html/
+			js/
+				navigation.js
+	schedule.ods
+	schedule.xlsx
