@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SSD - Grid</title>
+
+    <!-- Custom Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jersey+10&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+          rel="stylesheet">
+
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="styles/normalize-ssd.css">
+    <link rel="stylesheet" href="styles/styles.css">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <link rel="shortcut icon" href="favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="MyWebSite" />
+    <link rel="manifest" href="site.webmanifest" />
+
+    <!-- JavaScript -->
+    <script src="js/navigation.js" defer></script>
+</head>
+<body>
+    <div class="site-wrapper">
+
+        <header>
+            <div>
+                <img class="site-logo" src="images/lightbulb.svg" alt="Lightbulb graphic">
+
+                <button class="hamburger" aria-label="Open navigation menu" aria-controls="main-nav"
+                        aria-expanded="false">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+
+                <nav id="main-nav">
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Projects</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <main>
+
+            <section class="banner">
+                <h1>Let's Play</h1>
+                <img src="images/pixel-banner.webp" alt="8-bit pixel art landscape">
+            </section>
+
+            <section class="cards">
+                <h2>Some Cards</h2>
+                <figure>
+                    <img src="images/jack-hearts.png" alt="Jack of Hearts">
+                    <figcaption>Jack of Hearts</figcaption>
+                </figure>
+                <figure>
+                    <img src="images/queen-hearts.png" alt="Queen of Hearts">
+                    <figcaption>Queen of Hearts</figcaption>
+                </figure>
+                <figure>
+                    <img src="images/king-hearts.png" alt="King of Hearts">
+                    <figcaption>King of Hearts</figcaption>
+                </figure>
+            </section>
+            <section class="puzzle">
+                <h2>Puzzle Time!</h2>
+                <figure>
+                    <img src="images/pixel-house.png" alt="A cottage 8-bit pixel art style">
+                    <figcaption>
+                        <p>What you're building using CSS Grid</p>
+                    </figcaption>
+                </figure>
+            
+                <div>
+                    <img src="images/puzzle-4.jpg" alt="A segment of the 8-bit cottage" id="puzzle-4">
+                    <img src="images/puzzle-7.jpg" alt="A segment of the 8-bit cottage" id="puzzle-7">
+                    <img src="images/puzzle-8.jpg" alt="A segment of the 8-bit cottage" id="puzzle-8">
+                    <img src="images/puzzle-3.jpg" alt="A segment of the 8-bit cottage" id="puzzle-3">
+                    <img src="images/puzzle-2.jpg" alt="A segment of the 8-bit cottage" id="puzzle-2">
+                    <img src="images/puzzle-5.jpg" alt="A segment of the 8-bit cottage" id="puzzle-5">
+                    <img src="images/puzzle-1.jpg" alt="A segment of the 8-bit cottage" id="puzzle-1">
+                    <img src="images/puzzle-6.jpg" alt="A segment of the 8-bit cottage" id="puzzle-6">
+                </div>
+            </section>
+
+
+        </main>
+        <footer>
+            <img class="site-logo" src="images/lightbulb.svg" alt="Made-up Co. Logo">
+
+            <p>&copy; SSDP 2025</p>
+            <p>For educational purposes only.</p>
+        </footer>
+    </div>
+</body>
+</html>

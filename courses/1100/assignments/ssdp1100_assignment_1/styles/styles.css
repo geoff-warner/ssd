@@ -1,0 +1,53 @@
+body {
+  font-family: "Courier New", Courier, monospace;
+  font-weight: 200;
+  font-size: 1rem;
+  color: #000;
+  background-color: #fffacd;
+  line-height: 1.5;
+  padding: 1rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  color: #3314a3;
+}
+
+h1 {
+  text-transform: uppercase;
+}
+
+/* google search result*/
+ul li:nth-child(odd) {
+  color: #a50202; /* dark red for odd-numbered items */
+}
+
+ul li:nth-child(even) {
+  color: #165801; /* dark yellow for even-numbered items */
+}
+/*end google search result*/
+
+header img {
+  width: 500px;
+  height: auto;
+  max-width: 20rem;
+}
+
+@media (min-width: 50em) {
+  h1 {
+    text-transform: none;
+  }
+
+  section {
+    background-color: #00ffff;
+  }
+
+  header img {
+    max-width: none;
+  }
+}

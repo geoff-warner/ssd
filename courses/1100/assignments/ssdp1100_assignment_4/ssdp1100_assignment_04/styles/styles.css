@@ -1,0 +1,314 @@
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+# Generic (CALLED IN ANOTHER FILE)
+	- Normalize
+	- Box sizing
+	- Media width
+# Base
+	- Typography
+	- Elements
+	- Links
+# Layouts
+# Components
+	- Header
+	- Main
+	- Footer
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+# Base
+--------------------------------------------------------------*/
+
+/* Typography
+--------------------------------------------- */
+body {
+  font-family: "Josefin Sans", Arial, Helvetica, sans-serif;
+  font-size: clamp(1rem, 5vw, 1.25rem);
+  background-color: #f5efe0;
+  line-height: 1.5;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: Arvo, sans-serif;
+  color: #680808;
+  font-weight: 600;
+  font-size: clamp(2rem, 10vw, 3rem);
+}
+
+/* Elements
+--------------------------------------------- */
+.site-title {
+  font-family: Arvo, sans-serif;
+  font-weight: 600;
+  color: #ffffff;
+  width: 100%;
+}
+
+/* Links
+--------------------------------------------- */
+a,
+a:visited {
+  color: #680808;
+  text-decoration: none;
+  padding: 8px;
+}
+
+a:hover,
+a:focus,
+a:active {
+  color: #333333;
+  text-decoration: underline;
+}
+
+a:focus {
+  outline: 0.0625rem solid #333333;
+  border-radius: 0.3125rem;
+}
+
+/*--------------------------------------------------------------
+# Layout
+--------------------------------------------------------------*/
+
+.site-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.site-wrapper main {
+  flex-grow: 1;
+}
+
+.max-width {
+  padding: 1rem 2rem;
+  max-width: 64rem;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.site-wrapper header,
+.site-wrapper footer {
+  background-color: #333333;
+  color: #ffffff;
+}
+
+/*--------------------------------------------------------------
+# Components
+--------------------------------------------------------------*/
+
+/* Header
+--------------------------------------------- */
+header {
+  height: 8.375rem;
+  width: 100%;
+
+  /* ASSIGNMENT TASK:
+       X - On mobile, affix the header on the bottom of the page.
+       X - Ensure that it shows on top of all other elements.    
+    */
+  position: fixed;
+  bottom: 0;
+  z-index: 1000;
+}
+
+header div {
+  padding: 16px;
+  text-align: center;
+}
+
+header .site-logo {
+  margin: 16px auto;
+}
+
+header nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+}
+
+nav ul a,
+nav ul a:visited {
+  display: inline-block;
+  padding: 16px;
+  color: #ffffff;
+}
+
+nav ul a:hover,
+nav ul a:focus,
+nav ul a:active {
+  color: #ffc7c7;
+}
+
+nav ul a:focus {
+  outline-color: #ffc7c7;
+}
+
+@media (min-width: 37.5em) {
+  header {
+    /* ASSIGNMENT TASK:
+           X - Override the header position to revert to its default behaviour
+         */
+    position: static;
+  }
+
+  header div {
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  header nav ul {
+    flex-wrap: nowrap;
+  }
+}
+
+/* Main
+--------------------------------------------- */
+/* Hero Section */
+.hero {
+  min-height: 75vh;
+  background-image: url(../images/person-blinds.jpg);
+  background-size: cover;
+  background-position: left center;
+  /* ASSIGNMENT TASK:
+        - Add a positioning value to this container so that its child elements
+     can stay within its box when positioned.
+    */
+  position: relative;
+  /*  */
+  display: flex;
+  place-content: center;
+  align-items: center;
+}
+
+h1 {
+  height: fit-content;
+  width: fit-content;
+  background-color: #f4f5f7b1;
+  backdrop-filter: blur(5px);
+  /* ASSIGNMENT TASK:
+        - Position this element so it is centered vertically and horizontally within its parent container.
+    */
+  position: absolute;
+  margin: auto;
+}
+
+/* About Section */
+
+#about h2,
+#about h3 {
+  background-color: #f5efe0;
+  /* ASSIGNMENT TASK:
+        - Make these elements stay visible at the top of the screen when the page is scrolled.
+    */
+  position: sticky;
+  top: 0;
+}
+
+/* Cases Section */
+#cases > div {
+  min-height: 80vh;
+  position: relative;
+}
+
+#cases article {
+  max-width: 37.5rem;
+  margin-bottom: 1rem;
+  background-color: #fde08a;
+  border-radius: 10px;
+  justify-self: center;
+}
+
+#cases article > * {
+  padding: 0.5rem;
+}
+
+#cases h3 {
+  margin: 0;
+  color: #ffffff;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  font-size: clamp(1.5rem, 6vw, 2rem);
+  text-align: center;
+}
+
+#cases article:nth-of-type(odd) h3 {
+  background-color: #680808;
+}
+
+#cases article:nth-of-type(even) h3 {
+  background-color: #0a0868;
+}
+
+@media (min-width: 50em) {
+  #cases article {
+    cursor: pointer;
+    filter: drop-shadow(2px 2px 3px #333333);
+    transition: all 0.5s ease-in-out;
+    margin: 0 auto;
+    /* ASSIGNMENT TASK:
+        - Position these elements so it is centered horizontally inside its parent container. Refer to the screenshot for desktop.
+        */
+    position: absolute;
+  }
+
+  #cases p {
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+  }
+
+  /* ASSIGNMENT TASK: 
+        - Move the following elements down from the top so they stack below each other.
+          (Each element will use a larger offset than the one prior, such as 4rem, 8rem etc.)
+    */
+
+  /* Start */
+
+  #cases article:nth-of-type(2) {
+    top: 4rem;
+  }
+
+  #cases article:nth-of-type(3) {
+    top: 8rem;
+  }
+
+  #cases article:nth-of-type(4) {
+    top: 12rem;
+  }
+  /* End */
+
+  #cases article:hover p {
+    opacity: 1;
+  }
+
+  #cases article:hover {
+    transform: scale(1.25);
+    /* ASSIGNMENT TASK:
+        - Add the property that will allow you to show this element in front of the other ones.
+        (This is the property that deals with the stacking order)
+    */
+    z-index: 100;
+  }
+}
+
+/* Footer
+--------------------------------------------- */
+footer {
+  text-align: center;
+  margin-bottom: 8.3rem;
+}
+
+@media (min-width: 50em) {
+  footer {
+    margin-bottom: 0;
+  }
+}

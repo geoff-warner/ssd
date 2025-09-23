@@ -1,0 +1,141 @@
+/* Base Styles */
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1rem;
+  padding: 0 2rem;
+  background-color: #d8e5f6;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  color: #0b5777;
+}
+
+/* Add link styles here */
+a,
+a:visited {
+  color: #008080;
+  text-decoration: none;
+  padding: 0.5rem;
+}
+
+a:hover,
+a:focus,
+a:active {
+  color: #000;
+  text-decoration: underline;
+}
+a:focus {
+  outline: 1px solid #308171;
+  border-radius: 5px;
+}
+/* Header */
+body > header {
+  text-align: center;
+}
+
+nav ul {
+  /* Additional ul styles here */
+  list-style: none;
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #ffffff;
+  width: 100%;
+  z-index: 100;
+  padding: 1rem;
+}
+
+nav ul.open {
+  display: block;
+  top: 5rem;
+}
+
+nav ul li {
+  padding: 1rem;
+}
+
+.hamburger {
+  display: inline-block;
+  vertical-align: middle;
+  width: 2rem;
+  height: 2rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin-left: 1rem;
+}
+
+.hamburger:focus {
+  outline: 2px solid #0f84b5;
+}
+
+.hamburger .bar {
+  display: block;
+  width: 22px;
+  height: 3px;
+  margin: 5px auto;
+  background: #0f84b5;
+  border-radius: 2px;
+  transition: background 0.3s;
+}
+
+@media (min-width: 50em) {
+  .hamburger {
+    display: none;
+  }
+
+  nav ul,
+  nav ul.open {
+    display: block;
+    position: static;
+    background-color: transparent;
+    padding: 0;
+  }
+
+  nav ul li {
+    display: inline-block;
+    margin-right: 1rem;
+  }
+}
+
+/* Main */
+
+/* Article and Section styles go */
+article footer {
+  font-style: italic;
+}
+article {
+  background-color: #ffffff;
+  padding: 1rem;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+}
+
+#gallery img {
+  width: 200px;
+  display: block;
+  margin: 0 auto 1rem auto;
+}
+
+@media (min-width: 50em) {
+  article {
+    background-color: #f7e2c9;
+  }
+  #gallery img {
+    display: inline;
+    margin: 0;
+  }
+}
+
+/* Footer */
+body > footer {
+  text-align: center;
+}

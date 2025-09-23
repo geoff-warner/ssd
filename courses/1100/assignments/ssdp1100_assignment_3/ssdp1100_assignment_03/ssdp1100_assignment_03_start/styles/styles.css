@@ -1,0 +1,303 @@
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+# Generic (CALLED IN ANOTHER FILE)
+	- Normalize
+	- Box sizing
+	- Media width
+# Base
+	- Typography
+	- Elements
+	- Links
+# Layouts
+# Components
+	- Header
+	- Main
+	- Footer
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+# Base
+--------------------------------------------------------------*/
+
+/* Typography
+--------------------------------------------- */
+body {
+    font-family: Ubuntu, Arial, Helvetica, sans-serif;
+    font-size: clamp(16px, 5vw, 20px);
+    background-color: #f5efe0;
+    line-height: 1.5;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: #290583;
+    font-weight: 400;
+    font-size: clamp(32px, 10vw, 48px);
+}
+
+h1,
+.site-title {
+    color: #000000;
+    font-family: 'Homemade Apple', cursive;
+    font-weight: 600;
+}
+
+/* Elements
+--------------------------------------------- */
+.site-title {
+    color: #ffffff;
+    width: 100%;
+}
+
+/* Links
+--------------------------------------------- */
+a,
+a:visited {
+    color: #831c69;
+    text-decoration: none;
+    padding: 8px;
+}
+
+a:hover,
+a:focus,
+a:active {
+    color: #51513D;
+    text-decoration: underline;
+}
+
+a:focus {
+    outline: .0625rem solid #51513D;
+    border-radius: .3125rem;
+}
+
+a.cta-button,
+a.cta-button:visited {
+    display: block;
+    width: fit-content;
+    background-color: #831c69;
+    color: #ffffff;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 12px;
+    border: .125rem solid #831c69;
+    outline: none;
+    border-radius: .625rem;
+    transition: all .5s ease-in-out;
+    margin: 1rem 0;
+}
+
+a.cta-button:hover,
+a.cta-button:focus,
+a.cta-button:active {
+    background-color: #ffffff;
+    color: #831c69;
+    border-color: #831c69;
+}
+
+
+/*--------------------------------------------------------------
+# Layout
+--------------------------------------------------------------*/
+
+.site-wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.site-wrapper main {
+    flex-grow: 1;
+}
+
+.max-width {
+    padding: 16px 32px;
+    max-width: 1024px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.site-wrapper header,
+.site-wrapper footer {
+    background-color: #51513D;
+    color: #ffffff;
+}
+
+/*--------------------------------------------------------------
+# Components
+--------------------------------------------------------------*/
+
+
+/* Header
+--------------------------------------------- */
+
+header div {
+    padding: 16px;
+    text-align: center;
+}
+
+header .site-logo {
+    margin: 16px auto;
+}
+
+header nav ul {
+    list-style: none;
+    padding: 0;
+
+    /* ASSIGNMENT TASK:
+        - Use flex styles to display the links in a row
+        - Ensure that when there isn't enough space, links move to the next line rather than overflowing or getting squished.
+        - Center the links without using the text-align property
+    */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+nav ul a,
+nav ul a:visited {
+    display: inline-block;
+    padding: 16px;
+    color: #ffffff;
+}
+
+
+nav ul a:hover,
+nav ul a:focus,
+nav ul a:active {
+    color: #ffff63;
+}
+
+nav ul a:focus {
+    outline-color: #ffff63;
+}
+
+
+@media (min-width: 37.5em) {
+
+    header div {
+        text-align: left;
+    }
+
+    .site-wrapper header div {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    header nav ul {
+        /* ASSIGNMENT TASK:
+            Override your mobile styles so that the links ONLY show in one row 
+        */
+    }
+}
+
+/* Main
+--------------------------------------------- */
+/* Hero Section */
+.hero {
+    min-height: 75vh;
+    background: #79BFF7;
+    background: linear-gradient(90deg, #2A6BA1 0%, #79BFF7 25%, #79BFF7 75%, #2A6BA1 100%);
+
+    /* ASSIGNMENT TASK:
+        - Use flex styles to center the content vertically AND horizontally
+    */
+}
+
+.hero-content {
+    width: fit-content;
+}
+
+/* Work Section */
+#work h3 {
+    margin: 0;
+    font-size: 2rem;
+    color: #51513D;
+}
+
+#work p {
+    margin: 0;
+    font-style: italic;
+}
+
+#work img {
+    aspect-ratio: 4/3;
+    object-fit: cover;
+}
+
+@media (min-width: 37.5em) {
+
+    #work a {
+        margin: 1rem auto;
+    }
+
+    .work-grid {
+        margin-bottom: 2rem;
+        /* ASSIGNMENT TASK:
+            - Use CSS Grid to create a layout with exactly 4 columns.
+            - The 1st and 4th columns should expand to fill any remaining space equally.
+            - The 2nd and 3rd columns should have a flexible width that stays between 10rem and 20rem.
+            - Make the height of all rows automatically adjust so that each row matches the height of its tallest item.
+            - Add spacing between rows of 2rem and between columns of 1rem using a single shorthand property.
+        */
+
+    }
+
+    .work-grid article:nth-of-type(1),
+    .work-grid article:nth-of-type(3) {
+        /* ASSIGNMENT TASK:
+            - Ensure that these elements are in the 2nd column of your grid.
+        */
+    }
+}
+
+/* About Section */
+#about img {
+    display: block;
+    height: auto;
+    object-fit: cover;
+    object-position: 40% 50%;
+}
+
+@media (min-width: 50em) {
+    #about div {
+        /* ASSIGNMENT TASK:
+            - Use the appropriate display value to show the paragraph and image in one row.
+         */
+    }
+
+    #about div>* {
+        width: 50%;
+    }
+
+
+}
+
+/* Footer
+--------------------------------------------- */
+footer {
+    text-align: center;
+}
+
+footer ul {
+    list-style: none;
+    padding: 0;
+}
+
+@media (min-width: 37.5em) {
+    .footer-wrap {
+        text-align: left;
+      /* ASSIGNMENT TASK:
+        - Place the site title and navigation side by side on one line.
+        - Put one at the left edge and the other at the right edge.
+        - Make sure both are vertically aligned in the center.
+    */
+
+
+    }
+}

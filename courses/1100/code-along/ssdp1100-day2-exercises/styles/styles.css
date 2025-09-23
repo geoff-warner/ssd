@@ -1,0 +1,42 @@
+/*=== Credits Page ===*/
+
+/* Table Styles */
+
+table {
+    border-collapse: collapse;
+    background-color: #ffffe0;
+}
+
+table, tr, td {
+    border: 1px solid #808080;
+}
+
+td {
+    padding: .5rem;  
+}
+/*  */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.5;
+    font-size: 1rem;
+}
+
+.warning {
+    color: #FFFFFF;
+    background-color: #840808;
+}
+
+h1 span {
+    text-decoration: underline;
+}
+
+span.warning {
+    background-color: #ffff00;
+    color: #000000;
+    font-weight: 700;
+}
+
+article div {
+    background-color: #add8e6;
+    padding-top: 20px;
+}

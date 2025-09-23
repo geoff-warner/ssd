@@ -1,0 +1,309 @@
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+# Generic (CALLED IN ANOTHER FILE)
+	- Normalize
+	- Box sizing
+	- Media width
+# Base
+	- Typography
+	- Elements
+	- Links
+# Layouts
+# Components
+	- Header
+	- Main
+	- Footer
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+# Base
+--------------------------------------------------------------*/
+
+/* Typography
+--------------------------------------------- */
+body {
+    font-family: Lato, Arial, Helvetica, sans-serif;
+    font-size: clamp(1rem, 5vw, 1.25rem);
+    background-color: #fcf9ec;
+    line-height: 1.5;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Jersey 10', Arial, Helvetica, sans-serif;
+    color: #820606;
+    font-weight: 400;
+    font-size: clamp(2rem, 10vw, 3rem);
+    text-transform: uppercase;
+}
+
+/* Elements
+--------------------------------------------- */
+.site-logo {
+    display: block;
+    height: 4rem;
+}
+
+/* Links
+--------------------------------------------- */
+a,
+a:visited {
+    color: #540349;
+    text-decoration: none;
+    padding: .5rem;
+}
+
+a:hover,
+a:focus,
+a:active {
+    color: #fa6800;
+    text-decoration: underline;
+}
+
+a:focus {
+    outline: 1px solid #fa6800;
+    border-radius: 5px;
+}
+
+
+/*--------------------------------------------------------------
+# Layout
+--------------------------------------------------------------*/
+
+.site-wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.site-wrapper main {
+    flex-grow: 1;
+}
+
+.site-wrapper header div,
+.site-wrapper footer,
+.site-wrapper main>section:not(:first-of-type) {
+    padding: 0 2rem;
+    max-width: 75rem;
+    width: 100%;
+    margin: 0 auto;
+}
+
+/*--------------------------------------------------------------
+# Components
+--------------------------------------------------------------*/
+
+
+/* Header
+--------------------------------------------- */
+.site-wrapper header {
+    background-color: #540349;
+}
+
+.site-wrapper header div {
+    text-align: center;
+    padding: 1rem;
+}
+
+header .site-logo {
+    margin: 1rem auto;
+}
+
+nav ul {
+    list-style: none;
+    padding-left: 0;
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #540349;
+    width: 100%;
+    z-index: 100;
+    padding: 1rem;
+}
+
+nav ul.open {
+    display: block;
+    top: 9rem;
+}
+
+nav ul a,
+nav ul a:visited {
+    display: inline-block;
+    padding: 1rem;
+    color: #ffffff;
+}
+
+
+nav ul a:hover,
+nav ul a:focus,
+nav ul a:active {
+    color: #ffff63;
+}
+
+nav ul a:focus {
+    outline-color: #ffff63;
+}
+
+.hamburger {
+    display: inline-block;
+    vertical-align: middle;
+    width: 2rem;
+    height: 2rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.hamburger:focus {
+    outline: 2px solid #ffffff;
+    border-radius: 5px;
+}
+
+.hamburger .bar {
+    display: block;
+    text-align: center;
+    width: 22px;
+    height: 3px;
+    margin: 5px auto;
+    background: #ffffff;
+    border-radius: 2px;
+    transition: background 0.3s;
+}
+
+@media (min-width: 50em) {
+    .hamburger {
+        display: none;
+    }
+
+    header .site-logo {
+        margin: 0;
+    }
+
+    nav ul,
+    nav ul.open {
+        display: flex;
+        gap: 2rem;
+        position: static;
+        background-color: transparent;
+        padding: 0;
+    }
+
+
+    .site-wrapper header div {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+/* Main
+--------------------------------------------- */
+/* Hero Section */
+.banner {
+    /* Add Grid Styles */
+}
+
+.banner img {
+    display: block;
+    height: 70vh;
+    width: 100%;
+    object-position: right center;
+    object-fit: cover;
+    
+    /* More Grid Styles */
+}
+
+
+.banner h1 {
+    font-size: clamp(4rem, 15vw, 6.5rem);
+    position: relative;
+    z-index: 2;
+    backdrop-filter: blur(10px);
+    text-align: center;
+
+    /* More Grid Styles */
+
+}
+
+/* Cards Section */
+.cards {
+    text-align: center;
+
+    /* Add Grid Styles */
+}
+
+.cards h2 {
+    /* Add Grid Styles */
+}
+
+.cards figure {
+    /* Add Grid Styles */
+}
+
+.cards img {
+    max-width: 300px;
+}
+
+figcaption {
+    font-weight: 700;
+}
+
+/* Puzzle Section */
+.puzzle figure {
+    max-width: 25rem;
+    text-align: center;
+    margin: 1rem auto 2rem;
+}
+
+.puzzle figure img {
+    display: block;
+    margin: 0 auto;
+    width: 20rem;
+    height: 20rem;
+    object-fit: cover;
+    object-position: center top;
+}
+.puzzle > div {
+    background-color: #540349;
+    padding: 2rem;
+
+    /* Add Grid Styles */
+}
+
+#puzzle-1 {
+    /* Place on Grid to build the puzzle */
+}
+#puzzle-2 {
+   /* Place on Grid to build the puzzle */
+}
+#puzzle-3 {
+    /* Place on Grid to build the puzzle */
+}
+#puzzle-4 {
+    /* Place on Grid to build the puzzle */
+}
+#puzzle-5 {
+    /* Place on Grid to build the puzzle */
+}
+#puzzle-6 {
+    /* Place on Grid to build the puzzle */
+}
+#puzzle-7 {
+    /* Place on Grid to build the puzzle */
+}
+#puzzle-8 {
+    /* Place on Grid to build the puzzle */
+}
+
+/* Footer
+--------------------------------------------- */
+footer>* {
+    text-align: center;
+    margin: .5rem auto;
+}
