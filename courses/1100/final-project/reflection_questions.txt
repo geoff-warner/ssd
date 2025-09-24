@@ -8,8 +8,10 @@ a. What resources or websites did you use while working on this project?
     - general colour scheme ideas
 
 b. What is your favorite aspect or feature of your website? 
+    - I usually get the most enjoyment out of making elements interactive/animated
 
 c. What is something you learned from this course you want to improve on as you 
 continue? 
     - responsive design, specifically as it pertains to mobile development concepts
+    - the fluidity of a website is always something that I notice and appreciate
  

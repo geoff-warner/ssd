@@ -1,0 +1,49 @@
+essentials
+    - photos
+        - select and optimize
+        - make static, implement js interactivity if time allows
+
+    - complete reflections
+        - use for FAQ section?
+        - separate page?
+
+    - table
+        - find a suitable use-case
+            - dynamic update when submitting contact info
+        - look at advanced formats
+        - check standards for mobile viewing
+
+    - form
+        - check semantics
+        - add placeholder values
+
+    - responsiveness
+        - check popular mobile layouts
+            X- bottom navigation for mobile; remove top nav
+            - center expandable icon (wedge?)
+                - expand to flex: column
+                    - close button
+
+extras
+    - styling
+        - flesh out CSS
+
+    - better logo/favicon
+
+    - actual landing page
+        - background image
+        - hero/banner/cta for more modern look
+
+    - expand on FAQ section
+        - customize widgets
+        - mb use for reflections rather than generic text
+
+    - improve navigation layout
+        - link styling
+            - look at contemporaries
+        - locations
+            - research and apply thumb navigation concepts
+
+    - javascript 
+        - interactivity for photos
+        - hamburger menus

@@ -15,21 +15,20 @@
 	- Main
 	- Footer
 --------------------------------------------------------------*/
-
 /* ## Base ## */
-
 /* Typography--------------------------------------------- */
 body {
   font-family: Arial, Helvetica, sans-serif;
-  font-size: clamp(1rem, 5vw, 1.25rem);
+  font-size: clamp(0.5rem, 5vw, 3rem);
   color: #424040;
   background-color: #f0e5ca;
-  margin: auto;
+  margin: 0 auto 0 auto;
   text-align: center;
   max-width: 80vw;
   line-height: 1.5;
+  display: flex;
+  flex-direction: column;
 }
-
 h1,
 h2,
 h3,
@@ -37,44 +36,41 @@ h4,
 h5,
 h6 {
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  margin: 0.5em 0 0.5em 0;
 }
 h1 {
-  font-size: clamp(2rem, 10vw, 3rem);
+  font-size: clamp(1.5em, 10vw, 3em);
+}
+h2 {
+  font-size: clamp(1.25em, 10vw, 2em);
 }
 /* 
 p {
 } */
 /* ------------------------------------------------------------------------- */
-
 /* Elements */
 ul {
   list-style: none;
   padding-left: 0;
-  margin-top: 0.5rem;
-  margin-bottom: 0.5rem;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
 }
-
 /* ol {
 } */
-
 /* dl {
 } */
-
 /* figure {
 } */
-
 /* table {
 } */
-
 /* ------------------------------------------------------------------------- */
-
 /* Links */
 /* a:link, a:visited, a:hover, a:active */
 a,
 a:visited {
   color: #855e44;
   text-decoration: none;
-  padding: 0.5rem;
+  padding: 0.5em;
 }
 
 a:hover,
@@ -85,9 +81,7 @@ a:active {
   border: #000 2px solid;
   border-radius: 5px;
 }
-
 /* ## Layout ## */
-
 /* direct copy/paste from lesson  */
 .site-wrapper {
   display: flex;
@@ -95,32 +89,30 @@ a:active {
   min-height: 100vh;
   justify-content: center;
 }
-
 .site-wrapper main {
   flex-grow: 1;
 }
-
 .site-wrapper section,
 .site-wrapper header div,
 .site-wrapper footer {
-  padding: 0 2rem;
-  max-width: 75rem;
+  padding: 0 2em;
   width: 100%;
-  margin: 0 auto;
 }
-
 /* ------------------------------------------------------------------------- */
-
 /* GRID */
 .grid-items {
+  max-width: 100%;
   display: grid;
-  width: 60vw;
-  height: 60vw;
+  aspect-ratio: 1;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(3, 1fr);
-  gap: 1rem;
-  margin: 3rem auto 5rem auto;
-  place-content: center;
+  gap: 1em;
+  justify-content: center;
+}
+.grid-items section {
+  margin: 0;
+  place-self: stretch;
+  place-content: stretch;
 }
 .grid-items > :focus {
   position: absolute;
@@ -130,48 +122,70 @@ a:active {
   left: 50%;
   transform: translate(-50%, -50%);
 }
-
 .grid-items :nth-child(odd) {
   background-color: #000;
 }
 .grid-items :nth-child(even) {
   background-color: #fff;
 }
-
 /* ------------------------------------------------------------------------- */
-
 /* ## Components ## */
-
 /* ------------------------------------------------------------------------- */
-
 /* Header */
 header {
   color: #5c08a0;
   border-bottom: 2px solid #06484a;
+  margin-bottom: 1em;
+}
+header nav {
+  display: none;
 }
 /* ------------------------------------------------------------------------- */
-
 /* Main  */
 form div {
   display: flex;
-  margin: 1rem 0 1rem;
+  flex-direction: column;
+  margin: auto;
   justify-content: space-between;
+}
+.form-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+  width: 80%;
+  justify-content: space-between;
+  justify-self: center;
+  align-items: center;
+}
+.form-item {
+  display: flex;
+  flex: column;
+  margin: 0.5em 0 0.5em 0;
+  justify-content: left;
+  text-align: left;
 }
 input,
 textarea {
-  width: 60%;
+  width: 80%;
 }
-
+textarea {
+  field-sizing: content;
+}
+section {
+  /* display: block; */
+  margin: 1em auto 1em auto;
+  /* justify-content: center; */
+}
 #submit-button {
   max-width: fit-content;
+  margin-top: 1em;
 }
 /* ------------------------------------------------------------------------- */
-
 /* Footer */
 footer {
   color: #3b838a;
   border-top: 2px solid #06484a;
-  /* padding: 1rem; */
+  margin-top: 1em;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -180,62 +194,75 @@ footer {
 }
 /* ------------------------------------------------------------------------- */
 .foot-note {
-  font-size: smaller;
+  font-size: 0.5em;
 }
 details {
   font-size: 0.75em;
-  font-weight: 200;
+  font-weight: 400;
+  text-align: left;
+  margin: 0.5em auto 0.5em auto;
 }
+/* GOOGLE SEARCH */
+/* COPY PASTE -------------------------------------------------------------- */
+details::details-content {
+  overflow: hidden;
+  transition: max-height 0.3s ease-out;
+  max-height: 0;
+}
+details[open]::details-content {
+  max-height: 500px; /* Or a sufficiently large value */
+}
+/* END COPY PASTE ---------------------------------------------------------- */
 
-details p {
-  max-width: 80%;
-  margin: auto;
-}
 summary {
-  font-size: 1.5em;
+  font-size: 1.25em;
+  list-style: none;
 }
-
 /* ------------------------------------------------------------------------- */
-
-@media (min-width: 60rem) {
+summary::after {
+  content: "+";
+  padding-left: 5em;
+}
+details[open] summary::after {
+  content: "-";
+  padding-left: 5em;
+}
+/* ------------------------------------------------------------------------- */
+details[open] summary {
+  background-color: #855e44;
+  color: #f0e5ca;
+}
+/* ------------------------------------------------------------------------- */
+@media (min-width: 1000px) {
   header,
   footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
-
+  header nav {
+    display: flex;
+    flex-direction: row;
+    font-size: 0.5em;
+    flex-wrap: nowrap;
+    justify-content: flex-end;
+    flex-shrink: 1;
+  }
+  footer nav {
+    display: none;
+  }
   nav ul {
     display: flex;
     gap: 2rem;
   }
-
-  .form-wrapper {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-    width: 40%;
-    justify-content: space-between;
-    justify-self: center;
-  }
-  /* .grid-items > :hover,
-  .grid-items > :focus {
-    transform: none;
-    position: static;
-  } */
-
   /* this is influencing form items alignment */
   form div {
     display: flex;
-    margin: 1rem 0 1rem;
+    /* margin: 1em 0 1em; */
     justify-content: space-between;
   }
-
   input,
   textarea {
-    width: 20rem;
-  }
-  footer nav {
-    display: none;
+    width: 100%;
   }
 }
