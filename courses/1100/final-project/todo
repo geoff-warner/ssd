@@ -10,6 +10,9 @@ essentials
     - table
         - find a suitable use-case
             - dynamic update when submitting contact info
+            or
+better      - comments section
+
         - look at advanced formats
         - check standards for mobile viewing
 
@@ -36,7 +39,6 @@ extras
 
     - expand on FAQ section
         - customize widgets
-        - mb use for reflections rather than generic text
 
     - improve navigation layout
         - link styling
